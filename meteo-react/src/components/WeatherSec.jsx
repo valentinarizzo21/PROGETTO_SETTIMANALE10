@@ -14,7 +14,6 @@ const WeatherSec = () => {
   const inputRef = useRef();
   const [weatherData, setWeatherData] = useState(false);
   const navigate = useNavigate();
-
   const iconsList = {
     "01d": i_clear,
     "01n": i_clear,
@@ -62,9 +61,11 @@ const WeatherSec = () => {
         visibility: data.visibility,
         windDirection: data.wind.deg,
       });
+
       console.log(data);
     } catch (error) {
       setWeatherData(false);
+
       console.error("Errore nel recupero dei dati", error);
     }
   };
