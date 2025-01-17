@@ -4,6 +4,7 @@ import WeatherSec from "./components/WeatherSec";
 import NavBar from "./components/NavBar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MoreDetails from "./components/MoreDetails";
+import FooterApp from "./components/FooterApp";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
           <Route path="/" element={<WeatherSec />} />
           <Route path="/moreDetails" element={<MoreDetails />} />
         </Routes>
+        <FooterApp />
       </div>
     </BrowserRouter>
   );

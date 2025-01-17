@@ -13,7 +13,7 @@ const MoreDetails = () => {
   return (
     <div className="container">
       <div className="row mt-5">
-        <div className="col-12 col-md-6 d-flex flex-column justify-content-center">
+        <div className="col-12 col-md-6 col-lg-6 d-flex flex-column justify-content-center">
           <h1 className="location align-self-center">{weatherData.location}</h1>
           <img
             src={weatherData.icon}
@@ -21,7 +21,7 @@ const MoreDetails = () => {
             className="weatherIcon"
           />
         </div>
-        <div className="col-12 col-md-6 properties d-flex justify-content-center">
+        <div className="col-12 col-md-6 col-lg-6 properties d-flex justify-content-center">
           <div className="weatherInfo">
             <p className="temperature d-flex flex-column">
               <strong>Temperature:</strong>

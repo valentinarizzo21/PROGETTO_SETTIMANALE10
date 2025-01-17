@@ -19,7 +19,7 @@
 .searchBar input {
   background-color: transparent;
   border: none;
-  padding: 1rem;
+  padding: 1rem 2rem;
 }
 
 .searchBar img {

@@ -73,15 +73,32 @@ const WeatherSec = () => {
     getWeatherInfo("Nago-Torbole");
   }, []);
 
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      getWeatherInfo(inputRef.current.value);
+      inputRef.current.value = "";
+    }
+  };
+
+  const unfillTheSearchInput = () => {
+    getWeatherInfo(inputRef.current.value);
+    inputRef.current.value = "";
+  };
+
   return (
     <div className="weather mt-5">
       <div className="searchBar">
-        <input ref={inputRef} type="text" placeholder="Search..." />
+        <input
+          ref={inputRef}
+          type="text"
+          placeholder="Search..."
+          onKeyDown={handleKeyDown}
+        />
         <img
           src={i_search}
           alt="Search Icon"
           className="searchIcon"
-          onClick={() => getWeatherInfo(inputRef.current.value)}
+          onClick={unfillTheSearchInput}
         />
       </div>
       {weatherData ? (
