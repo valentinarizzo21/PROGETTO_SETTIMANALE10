@@ -1,5 +1,6 @@
 import React from "react";
 import "./NavBar.css";
+import i_logo from "../assets/logo.png";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -10,7 +11,10 @@ const NavBar = () => {
     <>
       <Navbar collapseOnSelect expand="md" className="NavBarWeather">
         <Container>
-          <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+          <Navbar.Brand href="#home">
+            <img src={i_logo} alt="Logo" className="logoApp" />
+            WeatherVise
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ms-auto">
