@@ -41,6 +41,7 @@ const WeatherSec = () => {
       const API_KEY = "e01be54d6eb21466b6f187c679c5421e";
       const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}`;
       const res = await fetch(url);
+      console.log(url);
       if (!res.ok) {
         throw new Error(
           `Errore nel recupero dei dati della fetch: ${res.status}`
@@ -56,6 +57,10 @@ const WeatherSec = () => {
         description: data.weather[0].description,
         pressure: data.main.pressure,
         icon: icon,
+        maxTemp: Math.floor(data.main.temp_max),
+        minTemp: Math.floor(data.main.temp_min),
+        visibility: data.visibility,
+        windDirection: data.wind.deg,
       });
       console.log(data);
     } catch (error) {
