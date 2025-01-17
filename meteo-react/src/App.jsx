@@ -11,8 +11,8 @@ const App = () => {
       <div className="app">
         <NavBar />
         <Routes>
-          <Route path="/moreDetails" element={<MoreDetails />} />
           <Route path="/" element={<WeatherSec />} />
+          <Route path="/moreDetails" element={<MoreDetails />} />
         </Routes>
       </div>
     </BrowserRouter>

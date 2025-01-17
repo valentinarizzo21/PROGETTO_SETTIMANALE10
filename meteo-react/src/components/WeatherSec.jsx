@@ -74,7 +74,7 @@ const WeatherSec = () => {
   }, []);
 
   return (
-    <div className="weather">
+    <div className="weather mt-5">
       <div className="searchBar">
         <input ref={inputRef} type="text" placeholder="Search..." />
         <img

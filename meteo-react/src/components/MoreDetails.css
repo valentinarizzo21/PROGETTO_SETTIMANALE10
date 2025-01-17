@@ -1,0 +1,37 @@
+.moreDetails {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.location {
+  font-size: 70px;
+  font-weight: medium;
+  background: -webkit-linear-gradient(#f55555, #0e5cad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.weatherInfo {
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 250px;
+  width: 100%;
+  font-size: 1.2rem;
+}
+
+.weatherInfo strong {
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.weatherInfo .temp-value {
+  font-size: 2rem;
+  color: #007bff;
+  font-weight: bold;
+}
